@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+            
+            <button id="but1"  type = "button" onclick = xhttp >Search</button>
+            <script type="text/javascript">
+            
+            var xhttp = new XMLHttpRequest();
+             var url = "https://info2180-lab6-krystanramcharan.c9users.io/request.php?q=definition";
+             xhttp.onreadystatechange = function() {
+                 if(xhttp.readyState == 4 && xhttp.status == 200  ){
+                     document.getElementById('but1').onclick = function(){
+                         alert(xhttp.responseText);
+                     };
+                 }
+             };
+             xhttp.open('GET',url, true);
+             xhttp.send();
+            
+        </script>
+    </head>
+</html>
